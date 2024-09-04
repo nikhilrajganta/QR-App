@@ -1,12 +1,17 @@
 <div class="container">
   <h2 class="title">QR Code Generator</h2>
   <h1 class="warn">{{ warning }}</h1>
-  <input
-    type="text"
-    [(ngModel)]="inputText"
-    placeholder="Enter text here"
-    class="ip-text"
-  />
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="inputText"
+      placeholder="Enter text here"
+      class="ip-text"
+    />
+    @if (inputText) {
+    <span class="clear-icon" (click)="clearInput()">×</span>
+    }
+  </div>
   <button (click)="generateQRCode()" class="btn">Submit</button>
 
   @if (qrCodeUrl) {
@@ -17,6 +22,10 @@
   } @else {
   <div class="mt-4">
     <h4>Please enter text and submit to generate a QR Code.</h4>
+  </div>
+  } @if (qrCodeUrl) {
+  <div class="download">
+    <button (click)="downloadQRCode()" class="btn">Download QR Code</button>
   </div>
   }
 </div>

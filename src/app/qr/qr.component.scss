@@ -9,6 +9,25 @@
     align-items: center;
   }
 
+  .input-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+  }
+  
+  .clear-icon:hover {
+    color: #333;
+  }
+
   .warn{
     color: red;
   }

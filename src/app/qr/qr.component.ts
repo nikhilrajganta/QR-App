@@ -22,7 +22,8 @@ export class QrComponent {
 
   generateQRCode() {
     if (this.inputText.length == 0 || !this.inputText.trim()) {
-      this.warning = 'Invalid Input';
+      this.warning = 'Invalid Input ❌';
+      this.qrCodeUrl = undefined;
       return;
     }
     this.warning = '';
@@ -35,6 +36,19 @@ export class QrComponent {
         .catch((err) => {
           console.error(err);
         });
+    }
+  }
+  clearInput() {
+    this.inputText = '';
+    this.qrCodeUrl = undefined;
+  }
+
+  downloadQRCode() {
+    if (this.qrCodeUrl) {
+      const link = document.createElement('a');
+      link.href = this.qrCodeUrl;
+      link.download = `myqr.png`;
+      link.click();
     }
   }
 }
