@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="title">QR Code Generator</h2>
+  <h1 class="warn">{{ warning }}</h1>
+  <input
+    type="text"
+    [(ngModel)]="inputText"
+    placeholder="Enter text here"
+    class="ip-text"
+  />
+  <button (click)="generateQRCode()" class="btn">Submit</button>
+
+  @if (qrCodeUrl) {
+  <div class="qrcode-box">
+    <h4>Your QR Code:</h4>
+    <img [src]="qrCodeUrl" alt="QR Code" />
+  </div>
+  } @else {
+  <div class="mt-4">
+    <h4>Please enter text and submit to generate a QR Code.</h4>
+  </div>
+  }
+</div>
