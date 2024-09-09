@@ -1,11 +1,12 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { QrComponent } from './qr/qr.component';
+import { ScannerComponent } from './scanner/scanner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, QrComponent],
+  imports: [RouterOutlet, QrComponent, ScannerComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
