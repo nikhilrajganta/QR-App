@@ -1,12 +1,12 @@
 <div>
   <h2>QR Code Scanner</h2>
   <video #video width="300" height="200"></video>
+  <h3>Or</h3>
+  <input type="file" (change)="onFileSelected($event)" accept="image/*" />
   @if(scannedResult){
   <div>
     <h3>Scanned Result:</h3>
     <p>{{ scannedResult }}</p>
   </div>
   }
-  <h3>Or</h3>
-  <input type="file" (change)="onFileSelected($event)" accept="image/*" />
 </div>
