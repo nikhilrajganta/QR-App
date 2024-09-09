@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { QrComponent } from "./qr/qr.component";
+import { QrComponent } from './qr/qr.component';
 
 @Component({
   selector: 'app-root',
