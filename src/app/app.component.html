@@ -1,8 +1,15 @@
 <nav>
   <ul class="navbar">
     <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+    <li><a routerLink="/Scanner" routerLinkActive="active">Products</a></li>
+    <li>
+      <a
+        routerLink="/Contribute"
+        routerLinkActive="active"
+        (click)="opengithub()"
+        >Contact Us</a
+      >
+    </li>
   </ul>
 </nav>
 

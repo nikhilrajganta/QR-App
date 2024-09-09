@@ -24,4 +24,7 @@ export class AppComponent {
     script.crossOrigin = 'anonymous';
     document.head.appendChild(script);
   }
+  opengithub() {
+    window.open('https://github.com/nikhilrajganta/QR-App', '_blank');
+  }
 }
