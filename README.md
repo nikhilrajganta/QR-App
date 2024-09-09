@@ -1,27 +1,46 @@
-# Static
+# QR Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+This application allows users to scan QR codes using their device's camera and generate QR codes from text input. It utilizes the `qr-scanner` library for scanning QR codes and the `qrcode` library for generating QR codes.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **QR Code Scanning**: Scan QR codes using the device's camera with real-time feedback.
+- **Image Upload**: Select and scan QR codes from images stored on the local device.
+- **QR Code Generation**: Generate QR codes from user-provided text input.
+- **Download QR Code**: Download the generated QR code as an image file.
+- **User-Friendly Interface**: Simple and intuitive UI for easy interaction.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- TypeScript
+- HTML/CSS
+- `qr-scanner` library for scanning QR codes
+- `qrcode` library for generating QR codes
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To set up the project locally, follow these steps:
 
-## Running unit tests
+1. **Clone the repository**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/nikhilrajganta/QR-App.git
+   cd qr-code-scanner
+   ```
 
-## Running end-to-end tests
+2. **Install dependencies:**:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   - Make sure you have Node.js and npm installed. Then run:
 
-## Further help
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. **Run the application:**:
+
+   - Start the development server:
+
+   ```bash
+   ng serve
+   ```
