@@ -12,6 +12,7 @@ import { environment } from '../env';
 })
 export class AppComponent {
   title = 'static';
+
   ngOnInit() {
     this.loadAdsenseScript();
   }
