@@ -37,6 +37,19 @@ export class ScannerComponent implements OnInit {
 
     this.qrScanner.start();
   }
+  copyToClipboard() {
+    if (this.scannedResult) {
+      navigator.clipboard
+        .writeText(this.scannedResult)
+        .then(() => {
+          console.log('Copied to clipboard:', this.scannedResult);
+          alert('Copied to clipboard!');
+        })
+        .catch((err) => {
+          console.error('Could not copy text: ', err);
+        });
+    }
+  }
 
   onDecode(result: any) {
     this.scannedResult = result.data;
