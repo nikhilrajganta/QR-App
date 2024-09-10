@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import QrScanner from 'qr-scanner';
 
 @Component({
@@ -13,6 +19,8 @@ export class ScannerComponent implements OnInit {
   videoElement!: ElementRef<HTMLVideoElement>;
   public scannedResult: string = '';
   private qrScanner!: QrScanner;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.startScanner();
@@ -32,6 +40,7 @@ export class ScannerComponent implements OnInit {
 
   onDecode(result: any) {
     this.scannedResult = result.data;
+    this.cdr.markForCheck(); // Trigger change detection
     console.log('Decoded QR Code:', this.scannedResult);
   }
 
